@@ -1,0 +1,12 @@
+{% extends "base/http_error_code.html" %}
+{% load i18n %}
+
+{% block error_title %}
+    {% blocktrans %}The web server is returning an internal error for this page.{% endblocktrans %}
+{% endblock %}
+{% block error_explanation %}
+    {% blocktrans %}A 500 error status implies there is a problem with the web server's software causing it to malfunction.{% endblocktrans %}
+{% endblock %}
+{% block error_directions %}
+    {% blocktrans %}We reported this error to our web admin and he will review it. If you need immediate assistance, please send us an email to {{ admin_email }}. We apologize for any inconvenience.{% endblocktrans %}
+{% endblock %}

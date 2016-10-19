@@ -1,0 +1,9 @@
+{% extends "base/http_error_code.html" %}
+{% load i18n %}
+
+{% block error_title %}
+    {% blocktrans %}Sorry! You don't have access permissions for that on {{ domain }}{% endblock trans %}
+{% endblock %}
+{% block error_explanation %}
+    {% blocktrans %}A 403 error status indicates that you don't have permission to access this file or page.{% endblocktrans %}
+{% endblock %}

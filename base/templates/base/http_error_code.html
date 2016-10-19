@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>
+            <i class="fa fa-ban red"></i> {{page.title}}
+        </h1>
+        <p class="lead">{% block error_title %}{% blocktrans %}Something went wrong on {{ domain }}.{% endblocktrans %}{% endblock %}</p>
+        <p><a href="/" class="btn btn-default btn-lg bg-primary">{% trans 'Take me to the homepage' %}</a>
+        </p>
+    </div>
+</div>
+<div class="container">
+    <div class="body-content">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead">{% block error_explanation %}{% endblock %}</p>
+                </div>
+            <div class="col-md-6">
+                <p class="lead">{% block error_directions %}{% blocktrans %}Please use your browser back button and check that you're in the right place. If you need immediate assistance, please send us an email to {{ admin_email }}. {% endblocktrans %}{% endblock %}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

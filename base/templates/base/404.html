@@ -1,0 +1,9 @@
+{% extends "base/http_error_code.html" %}
+{% load i18n %}
+
+{% block error_title %}
+    {% blocktrans %}We couldn't find what you're looking for on {{ domain }}.{% endblocktrans %}
+{% endblock %}
+{% block error_explanation %}
+    {% blocktrans %}A 404 error status implies that the file or page that you're looking for could not be found.{% endblocktrans %}
+{% endblock %}
